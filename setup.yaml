@@ -1,12 +1,19 @@
+- name: Mostrar directorio actual
+  hosts: localhost
+  ansible.builtin.command:
+    cmd: "pwd"
+  register: current_directory
+- debug:
+    var: current_directory.stdout
 - name: Setup - Instalar roles y colecciones de Galaxy
   hosts: localhost
   tasks:
     - name: Instalar roles desde requirements.yml
       ansible.builtin.command:
-        cmd: "ansible-galaxy install -r requirements.yml"
+        cmd: "ansible-galaxy install -r ./requirements.yml"
       changed_when: false
 
     - name: Instalar colecciones desde requirements.yml
       ansible.builtin.command:
-        cmd: "ansible-galaxy collection install -r requirements.yml"
+        cmd: "ansible-galaxy collection install -r ./requirements.yml"
       changed_when: false
