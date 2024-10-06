@@ -2,10 +2,10 @@
   hosts:  localhost
   gather_facts: false
 
-  vars:
-    parameter_name: "token2"
-    parameter_value: "12345678"
-    parameter_type: "SecureString"
+ # vars:
+ #   parameter_name: "token2"
+ #   parameter_value: "12345678"
+ #   parameter_type: "SecureString"
 
   tasks:
     - name: Create parameter in AWS Parameter Store 
