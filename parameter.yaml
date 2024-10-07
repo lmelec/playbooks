@@ -10,6 +10,7 @@
   tasks:
     - name: Create parameter in AWS Parameter Store 
       community.aws.aws_ssm_parameter_store:
+        AWS_REGION: "us-east-1"
         name: "{{ parameter_name }}"
         value: "{{ parameter_value }}"
         type: "SecureString"
