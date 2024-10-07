@@ -4,7 +4,7 @@
   gather_facts: no
   tasks:
     - name: Get all parameter store keys
-      community.aws.aws_ssm_parameter_store_info:
+      community.aws.aws_ssm_parameter_info:
         path: "/"
         recursive: true
       register: parameter_info
