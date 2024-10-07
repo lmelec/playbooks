@@ -12,7 +12,7 @@
       community.aws.aws_ssm_parameter_store:
         name: "{{ parameter_name }}"
         value: "{{ parameter_value }}"
-        type: "{{ parameter_type }}"
+        type: "SecureString"
         overwrite_value: always
       register: result
     
