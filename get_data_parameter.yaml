@@ -3,4 +3,4 @@
   gather_facts: no
   tasks:
     - debug:
-        msg: "Datos recibidos del survey: {{ parameter_type }}, {{ parameter_name }}, {{ parameter_value }}"
+        msg: "Datos recibidos del survey"
